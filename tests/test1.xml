@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DOCMAP>
+    <Topic Target="ALL">
+        <Title>My Document</Title>
+    </Topic>
+    <Topic Target="ALL">
+        <Title>Overview</Title>
+        <Topic Target="ALL">
+            <Title>Basic Features</Title>
+        </Topic>
+        <Topic Target="ALL">
+            <Title>About This Software</Title>
+            <Topic Target="ALL">
+                <Title>Platforms Supported</Title>
+            </Topic>
+        </Topic>
+    </Topic>
+</DOCMAP>
