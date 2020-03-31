@@ -28,6 +28,11 @@ class CMDI():
     def getstats(self, order=True):
         return sorted(self.stats.items(),key=operator.itemgetter(1),reverse=order)
 
+    def printstats(self, order=True):
+        for item in sorted(self.stats.items(),key=operator.itemgetter(1),reverse=order):
+            print("%s %s" % (item[0], item[1]))
+        return 
+
     def node_attributes(self, node):
         """Return an attribute dictionary """
         if node.hasAttributes():
