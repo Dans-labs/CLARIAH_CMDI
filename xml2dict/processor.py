@@ -1,6 +1,7 @@
 import sys
 from xml.dom import minidom
-from collections import OrderedDict
+from os import listdir
+from os.path import isfile, join
 import operator
 
 class CMDI():
@@ -98,10 +99,20 @@ class CMDI():
                         print "ERROR"
                 return self.with_attributes(node, new_dict)
 
+    def loadfolder(self, fname):
+        files = []
+        onlyfiles = [f for f in listdir(fname) if isfile(join(fname, f))]
+        for xmlfile in onlyfiles:
+            files.append("%s/%s" % (fname, xmlfile))
+        for filename in files:
+            try:
+                self.load(filename)
+            except:
+                print("Error in %s" % filename)
+        return files
+
     def load(self, fname):
         self.json = self.xmldom2dict(minidom.parse(fname))
-        #print(self.stats)
-        #return x
         return self.xmldom2dict(minidom.parse(fname))
 
     def lispy_string(node, lst=None, level=0):

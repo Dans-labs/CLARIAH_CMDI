@@ -8,7 +8,17 @@ from xml.dom import minidom
 from xml2dict.processor import CMDI # load, xmldom2dict
 
 if __name__=='__main__':
-    cmdi = CMDI()
-    d = cmdi.load(sys.argv[1])
-    print(cmdi.getstats())
-    print(cmdi.json)
+    # Do processing of one CMDI file
+    if os.path.isfile(sys.argv[1]):
+        cmdi = CMDI()
+        d = cmdi.load(sys.argv[1])
+        print(cmdi.getstats())
+        print(cmdi.json)
+
+    if os.path.isdir(sys.argv[1]):
+    # Show all CMDI files in folder
+        cmdif = CMDI()
+        print(cmdif.loadfolder(sys.argv[1]))
+        print(cmdif.getstats())
+        
+ 
