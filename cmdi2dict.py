@@ -11,4 +11,4 @@ if __name__=='__main__':
     cmdi = CMDI()
     d = cmdi.load(sys.argv[1])
     print(cmdi.getstats())
-    print(d)
+    print(cmdi.json)

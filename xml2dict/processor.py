@@ -7,6 +7,7 @@ class CMDI():
     def __init__(self, url=None, content=None, debug=False):
         self.url = url
         self.stats = {}
+        self.json = {}
 
     def dappend(self, dictionary, key, item):
         """Append item to dictionary at key.  Only create a list if there is more than one item for the given key.
@@ -98,7 +99,7 @@ class CMDI():
                 return self.with_attributes(node, new_dict)
 
     def load(self, fname):
-        #x = self.xmldom2dict(minidom.parse(fname))
+        self.json = self.xmldom2dict(minidom.parse(fname))
         #print(self.stats)
         #return x
         return self.xmldom2dict(minidom.parse(fname))
