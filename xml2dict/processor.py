@@ -1,5 +1,7 @@
 import sys
 from xml.dom import minidom
+from collections import OrderedDict
+import operator
 
 class CMDI():
     def __init__(self, url=None, content=None, debug=False):
@@ -20,6 +22,9 @@ class CMDI():
                 dictionary[key].append(item)
         else:
             dictionary.setdefault(key, item)
+
+    def getstats(self, order=True):
+        return sorted(self.stats.items(),key=operator.itemgetter(1),reverse=order)
 
     def node_attributes(self, node):
         """Return an attribute dictionary """
@@ -93,9 +98,9 @@ class CMDI():
                 return self.with_attributes(node, new_dict)
 
     def load(self, fname):
-        x = self.xmldom2dict(minidom.parse(fname))
-        print(self.stats)
-        return x
+        #x = self.xmldom2dict(minidom.parse(fname))
+        #print(self.stats)
+        #return x
         return self.xmldom2dict(minidom.parse(fname))
 
     def lispy_string(node, lst=None, level=0):
