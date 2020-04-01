@@ -9,12 +9,38 @@ class CMDI():
         self.url = url
         self.stats = {}
         self.json = {}
+        self.hierarchy = {}
+
+    def traverse(self, artefact):
+        #print(type(artefact))
+        if type(artefact) is dict:
+            print(artefact.keys())
+            for key in artefact.keys():
+                print("\t %s" % key)
+                self.traverse(artefact[key]) 
+                #self.hierarchy[key] :
+        elif type(artefact) is list:
+            #print(artefact)
+            for listkey in artefact:
+                print("\t\t %s" % listkey)
+                self.traverse(listkey)
+        else:
+            #print(artefact)
+            i = 1
+        return
+ 
+    def gethierarchy(self):
+        print(self.json.keys())
+        self.traverse(self.json)
+        return
 
     def dappend(self, dictionary, key, item):
         """Append item to dictionary at key.  Only create a list if there is more than one item for the given key.
         dictionary[key]=item if key doesn't exist.
         dictionary[key].append(item) if key exists."""
+        self.h = []
         if key in dictionary.keys():
+            self.h.append(key)
             if not isinstance(dictionary[key], list):
                 lst=[]
                 lst.append(dictionary[key])
@@ -23,7 +49,10 @@ class CMDI():
             else:
                 dictionary[key].append(item)
         else:
+            self.h.append(key)
             dictionary.setdefault(key, item)
+        #print("H: %s" % self.h)
+        #print("%s=%s" % (key, item))
 
     def getstats(self, order=True):
         return sorted(self.stats.items(),key=operator.itemgetter(1),reverse=order)
@@ -61,7 +90,7 @@ class CMDI():
                 return { str(node.nodeName): values }
             elif isinstance(values, str):
                 return { str(node.nodeName): values,
-                         attr_str(node): self.node_attributes(node)}
+                         self.attr_str(node): self.node_attributes(node)}
         else:
             return { str(node.nodeName): values }
 
