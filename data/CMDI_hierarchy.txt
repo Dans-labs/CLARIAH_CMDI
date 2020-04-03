@@ -1,0 +1,552 @@
+['#document']
+[DEBUG] Keys: ['#document'] 
+	 /#document
+[DEBUG] Keys: ['CMD'] 
+	 /#document/CMD
+[DEBUG] Keys: ['Header', '#attributes', 'Components', 'Resources'] 
+	 /#document/CMD/Header
+[DEBUG] Keys: ['MdCreator', 'MdCreationDate', 'MdProfile', 'MdCollectionDisplayName', 'MdSelfLink'] 
+	 /#document/CMD/Header/MdCreator
+	 /#document/CMD/Header/MdCreationDate
+	 /#document/CMD/Header/MdProfile
+	 /#document/CMD/Header/MdCollectionDisplayName
+	 /#document/CMD/Header/MdSelfLink
+	 /#document/CMD/#attributes
+[DEBUG] Keys: ['xmlns:xsi', 'xmlns', 'xsi:schemaLocation', 'CMDVersion'] 
+	 /#document/CMD/#attributes/xmlns:xsi
+	 /#document/CMD/#attributes/xmlns
+	 /#document/CMD/#attributes/xsi:schemaLocation
+	 /#document/CMD/#attributes/CMDVersion
+	 /#document/CMD/Components
+[DEBUG] Keys: ['corpusProfile'] 
+	 /#document/CMD/Components/corpusProfile
+[DEBUG] Keys: ['corpusInfo', 'resourceCommonInfo'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo
+[DEBUG] Keys: ['#attributes', 'corpusPartInfo', 'corpusType'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo
+[DEBUG] Keys: ['corpusPartCommonInfo', 'corpusTextInfo', 'mediaType', '#attributes'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo
+[DEBUG] Keys: ['geographicCoverageInfo', 'timeCoverageInfo', 'annotationInfo', '#attributes', 'classificationInfo', 'lingualityInfo', 'languageInfo'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/geographicCoverageInfo
+[DEBUG] Keys: ['#attributes', 'geographicCoverage'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/geographicCoverageInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/geographicCoverageInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/geographicCoverageInfo/geographicCoverage
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/timeCoverageInfo
+[DEBUG] Keys: ['timeCoverage', '#attributes'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/timeCoverageInfo/timeCoverage
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/timeCoverageInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/timeCoverageInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/annotationInfo
+[DEBUG] Keys: ['annotationType', 'annotationStandoff', '#attributes', 'annotationFormat', 'annotatedElements'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/annotationInfo/annotationType
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/annotationInfo/annotationStandoff
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/annotationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/annotationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/annotationInfo/annotationFormat
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/annotationInfo/annotatedElements
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/classificationInfo
+[DEBUG] Keys: ['genreInfo', 'subject_topic', '#attributes'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/classificationInfo/genreInfo
+[DEBUG] Keys: ['genre', '#attributes', 'genreType', 'unstandardisedGenre'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/classificationInfo/genreInfo/genre
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/classificationInfo/genreInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/classificationInfo/genreInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/classificationInfo/genreInfo/genreType
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/classificationInfo/genreInfo/unstandardisedGenre
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/classificationInfo/subject_topic
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/classificationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/classificationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/lingualityInfo
+[DEBUG] Keys: ['#attributes', 'lingualityType'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/lingualityInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/lingualityInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/lingualityInfo/lingualityType
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/languageInfo
+[DEBUG] Keys: ['languageVarietyInfo', 'languageName', '#attributes', 'languageId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/languageInfo/languageVarietyInfo
+[DEBUG] Keys: ['languageVarietyType', '#attributes', 'languageVarietyName'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/languageInfo/languageVarietyInfo/languageVarietyType
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/languageInfo/languageVarietyInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/languageInfo/languageVarietyInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/languageInfo/languageVarietyInfo/languageVarietyName
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/languageInfo/languageName
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/languageInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/languageInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusPartCommonInfo/languageInfo/languageId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo
+[DEBUG] Keys: ['textFormatInfo', '#attributes', 'characterEncodingInfo'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo
+[DEBUG] Keys: ['mimeType', 'sizePerTextFormat', '#attributes'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo/mimeType
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo/sizePerTextFormat
+[DEBUG] Keys: ['sizeInfo', 'role', '#attributes'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo/sizePerTextFormat/sizeInfo
+[DEBUG] Keys: ['sizeUnit', '#attributes', 'size'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo/sizePerTextFormat/sizeInfo/sizeUnit
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo/sizePerTextFormat/sizeInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo/sizePerTextFormat/sizeInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo/sizePerTextFormat/sizeInfo/size
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo/sizePerTextFormat/role
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo/sizePerTextFormat/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo/sizePerTextFormat/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/textFormatInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/characterEncodingInfo
+[DEBUG] Keys: ['characterEncoding', '#attributes'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/characterEncodingInfo/characterEncoding
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/characterEncodingInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/corpusTextInfo/characterEncodingInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/mediaType
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusPartInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/corpusInfo/corpusType
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo
+[DEBUG] Keys: ['projectInfo', '#attributes', 'role'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo
+[DEBUG] Keys: ['fundingType', 'projectName', 'funder', '#attributes', 'fundingCountry'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo/fundingType
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo/projectName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo/funder
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo/fundingCountry
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/role
+[DEBUG] Keys: ['projectInfo', '#attributes', 'role'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo
+[DEBUG] Keys: ['fundingType', 'projectName', 'funder', '#attributes', 'fundingCountry'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo/fundingType
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo/projectName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo/funder
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/projectInfo/fundingCountry
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/fundingProject/role
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/creationEndDate
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceCreationInfo/creationStartDate
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceType
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo
+[DEBUG] Keys: ['metadataCreator', '#attributes', 'metadataCreationDate', 'metadataLastDateUpdated'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator
+[DEBUG] Keys: ['actorInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo
+[DEBUG] Keys: ['actorType', '#attributes', 'personInfo', 'communicationInfo', 'role', 'organizationInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/actorType
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo
+[DEBUG] Keys: ['surname-attrs', 'surname', 'affiliation', '#attributes', 'sex', 'birthYear', 'givenName-attrs', 'position', 'givenName'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/surname-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/surname-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/surname
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation
+[DEBUG] Keys: ['organizationInfo', '#attributes', 'role'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo
+[DEBUG] Keys: ['organizationName', 'organizationName-attrs', '#attributes', 'departmentName-attrs', 'communicationInfo', 'departmentName'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/organizationName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/organizationName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/organizationName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/departmentName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/departmentName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo
+[DEBUG] Keys: ['city', 'url', 'country', '#attributes', 'zipCode', 'faxNumber', 'address', 'email'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/city
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/url
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/country
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/zipCode
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/faxNumber
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/address
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/email
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/organizationInfo/departmentName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/affiliation/role
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/sex
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/birthYear
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/givenName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/givenName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/position
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/personInfo/givenName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/communicationInfo
+[DEBUG] Keys: ['telephoneNumber', 'city', 'url', 'country', '#attributes', 'zipCode', 'address', 'email'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/communicationInfo/telephoneNumber
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/communicationInfo/city
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/communicationInfo/url
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/communicationInfo/country
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/communicationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/communicationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/communicationInfo/zipCode
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/communicationInfo/address
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/communicationInfo/email
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/role
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/organizationInfo
+[DEBUG] Keys: ['organizationName-attrs', 'departmentName-attrs', '#attributes', 'organizationName', 'departmentName'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/organizationInfo/organizationName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/organizationInfo/organizationName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/organizationInfo/departmentName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/organizationInfo/departmentName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/organizationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/organizationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/organizationInfo/organizationName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreator/actorInfo/organizationInfo/departmentName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataCreationDate
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/metadataInfo/metadataLastDateUpdated
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact
+[DEBUG] Keys: ['actorInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo
+[DEBUG] Keys: ['communicationInfo', 'actorType', '#attributes', 'role', 'personInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/communicationInfo
+[DEBUG] Keys: ['telephoneNumber', 'city', 'url', 'country', '#attributes', 'zipCode', 'address', 'email'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/communicationInfo/telephoneNumber
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/communicationInfo/city
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/communicationInfo/url
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/communicationInfo/country
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/communicationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/communicationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/communicationInfo/zipCode
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/communicationInfo/address
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/communicationInfo/email
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/actorType
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/role
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo
+[DEBUG] Keys: ['surname-attrs', 'surname', 'affiliation', '#attributes', 'sex', 'birthYear', 'givenName-attrs', 'position', 'givenName'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/surname-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/surname-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/surname
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation
+[DEBUG] Keys: ['organizationInfo', '#attributes', 'role'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo
+[DEBUG] Keys: ['organizationName', 'organizationName-attrs', '#attributes', 'departmentName-attrs', 'communicationInfo', 'departmentName'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/organizationName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/organizationName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/organizationName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/departmentName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/departmentName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo
+[DEBUG] Keys: ['city', 'url', 'country', '#attributes', 'zipCode', 'faxNumber', 'address', 'email'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/city
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/url
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/country
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/zipCode
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/faxNumber
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/address
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/email
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/organizationInfo/departmentName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/affiliation/role
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/sex
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/birthYear
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/givenName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/givenName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/position
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/contact/actorInfo/personInfo/givenName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo
+[DEBUG] Keys: ['documentationStructured', 'samplesLocation', '#attributes'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured
+[DEBUG] Keys: ['#attributes', 'role', 'documentInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/role
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo
+[DEBUG] Keys: ['publisher', '#attributes', 'ISBN', 'title', 'url', 'documentType', 'documentLanguageName', 'editor', 'year', 'documentLanguageId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/publisher
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/ISBN
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/title
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/url
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/documentType
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/documentLanguageName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/editor
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/year
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/documentLanguageId
+[DEBUG] Keys: ['#attributes', 'role', 'documentInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/role
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo
+[DEBUG] Keys: ['publisher', '#attributes', 'documentLanguageId', 'title-attrs', 'title', 'url', 'documentType', 'documentLanguageName', 'editor', 'year'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/publisher
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/documentLanguageId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/title-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/title-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/title
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/url
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/documentType
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/documentLanguageName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/editor
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/documentationStructured/documentInfo/year
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/samplesLocation
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/resourceDocumentationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo
+[DEBUG] Keys: ['description-attrs', 'description', 'url', '#attributes', 'resourceShortName', 'resourceName-attrs', 'resourceShortName-attrs', 'resourceName'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo/description-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo/description-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo/description
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo/url
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo/resourceShortName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo/resourceName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo/resourceName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo/resourceShortName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo/resourceShortName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/identificationInfo/resourceName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo
+[DEBUG] Keys: ['iprHolder', '#attributes', 'licenceInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder
+[DEBUG] Keys: ['actorInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo
+[DEBUG] Keys: ['actorType', '#attributes', 'role', 'personInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/actorType
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/role
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo
+[DEBUG] Keys: ['surname-attrs', 'surname', '#attributes', 'sex', 'affiliation', 'givenName-attrs', 'givenName'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/surname-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/surname-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/surname
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/sex
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation
+[DEBUG] Keys: ['organizationInfo', '#attributes', 'role'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo
+[DEBUG] Keys: ['organizationName', 'organizationName-attrs', '#attributes', 'departmentName-attrs', 'communicationInfo', 'departmentName'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/organizationName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/organizationName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/organizationName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/departmentName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/departmentName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo
+[DEBUG] Keys: ['telephoneNumber', 'city', 'url', 'country', '#attributes', 'zipCode', 'address', 'email'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/telephoneNumber
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/city
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/url
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/country
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/zipCode
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/address
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/communicationInfo/email
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/organizationInfo/departmentName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/affiliation/role
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/givenName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/givenName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/iprHolder/actorInfo/personInfo/givenName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo
+[DEBUG] Keys: ['distributionAccessMedium', '#attributes', 'attributionText', 'userCategory', 'licence', 'attributionText-attrs', 'distributionRightsHolder', 'licensor', 'downloadLocation', 'executionLocation'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionAccessMedium
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionAccessMedium/webExecutable
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionAccessMedium/downloadable
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/attributionText
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/userCategory
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licence
+[DEBUG] Keys: ['conditionsOfUse', 'licenceName', 'licenceFamily', '#attributes'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licence/conditionsOfUse
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licence/conditionsOfUse/BY
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licence/conditionsOfUse/C
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licence/conditionsOfUse/ID
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licence/conditionsOfUse/NORED
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licence/licenceName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licence/licenceFamily
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licence/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licence/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/attributionText-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/attributionText-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder
+[DEBUG] Keys: ['actorInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo
+[DEBUG] Keys: ['organizationInfo', 'actorType', '#attributes', 'role', 'communicationInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo
+[DEBUG] Keys: ['organizationName', 'organizationName-attrs', '#attributes', 'departmentName-attrs', 'departmentName', 'organizationShortName', 'organizationShortName-attrs'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/organizationName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/organizationName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/organizationName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/departmentName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/departmentName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/departmentName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/organizationShortName
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/organizationShortName/UiB
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/organizationShortName/UoB
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/organizationShortName-attrs
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/organizationShortName-attrs/{'xml:lang': 'nb'}
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/organizationShortName-attrs/xml:lang
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/organizationShortName-attrs/{'xml:lang': 'en'}
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/organizationInfo/organizationShortName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/actorType
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/role
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/communicationInfo
+[DEBUG] Keys: ['#attributes', 'email'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/communicationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/communicationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/distributionRightsHolder/actorInfo/communicationInfo/email
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor
+[DEBUG] Keys: ['actorInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo
+[DEBUG] Keys: ['organizationInfo', 'actorType', '#attributes', 'role', 'communicationInfo'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo
+[DEBUG] Keys: ['organizationName', 'organizationName-attrs', '#attributes', 'departmentName-attrs', 'departmentName', 'organizationShortName', 'organizationShortName-attrs'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/organizationName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/organizationName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/organizationName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/departmentName-attrs
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/departmentName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/departmentName
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/organizationShortName
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/organizationShortName/UiB
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/organizationShortName/UoB
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/organizationShortName-attrs
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/organizationShortName-attrs/{'xml:lang': 'nb'}
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/organizationShortName-attrs/xml:lang
+		 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/organizationShortName-attrs/{'xml:lang': 'en'}
+[DEBUG] Keys: ['xml:lang'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/organizationInfo/organizationShortName-attrs/xml:lang
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/actorType
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/role
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/communicationInfo
+[DEBUG] Keys: ['#attributes', 'email'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/communicationInfo/#attributes
+[DEBUG] Keys: ['ComponentId'] 
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/communicationInfo/#attributes/ComponentId
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/licensor/actorInfo/communicationInfo/email
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/downloadLocation
+	 /#document/CMD/Components/corpusProfile/resourceCommonInfo/distributionInfo/licenceInfo/executionLocation
+	 /#document/CMD/Resources
+[DEBUG] Keys: ['JournalFileProxyList', 'ResourceRelationList', 'ResourceProxyList'] 
+	 /#document/CMD/Resources/JournalFileProxyList
+	 /#document/CMD/Resources/ResourceRelationList
+	 /#document/CMD/Resources/ResourceProxyList
+None
