@@ -10,20 +10,29 @@ class CMDI():
         self.stats = {}
         self.json = {}
         self.hierarchy = {}
+        self.DEBUG = True
 
-    def traverse(self, artefact):
+    def traverse(self, artefact, parent=None):
         #print(type(artefact))
         if type(artefact) is dict:
-            print(artefact.keys())
+            if self.DEBUG:
+                print("[DEBUG] Keys: %s " % str(artefact.keys()))
+
             for key in artefact.keys():
-                print("\t %s" % key)
-                self.traverse(artefact[key]) 
-                #self.hierarchy[key] :
+                showkey = key
+                if parent:
+                    showkey = "%s/%s" % (parent, key) 
+                if self.DEBUG:
+                    print("\t /%s" % showkey)
+                self.traverse(artefact[key], showkey) 
         elif type(artefact) is list:
-            #print(artefact)
             for listkey in artefact:
-                print("\t\t %s" % listkey)
-                self.traverse(listkey)
+                showkey = listkey
+                if parent:
+                    showkey="%s/%s" % (parent, listkey)
+                if self.DEBUG:
+                    print("\t\t /%s" % showkey)
+                self.traverse(listkey, parent)
         else:
             #print(artefact)
             i = 1

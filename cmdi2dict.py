@@ -12,8 +12,9 @@ if __name__=='__main__':
     if os.path.isfile(sys.argv[1]):
         cmdi = CMDI()
         d = cmdi.load(sys.argv[1])
-        print(cmdi.printstats())
+#        print(cmdi.printstats())
 #        print(cmdi.json)
+        print(cmdi.gethierarchy())
 
     if os.path.isdir(sys.argv[1]):
     # Show all CMDI files in folder
