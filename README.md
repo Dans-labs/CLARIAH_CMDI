@@ -1,6 +1,7 @@
 # CMDI/XML exploration tool
 
 by Slava Tykhonov, Data Archiving and Networked Services (DANS-KNAW) https://dans.knaw.nl
+
 *This package created for CLARIAH+ WP3 https://clariah.nl
 
 *Licensed under GPLv3*
