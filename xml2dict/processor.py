@@ -5,12 +5,15 @@ from os.path import isfile, join
 import operator
 
 class CMDI():
-    def __init__(self, url=None, content=None, debug=False):
+    def __init__(self, actions=None, url=None, content=None, debug=False):
         self.url = url
         self.stats = {}
         self.json = {}
         self.hierarchy = {}
-        self.DEBUG = True
+        self.DEBUG = False
+        self.control = actions
+        if 'verbose' in actions:
+            self.DEBUG = actions['verbose']
 
     def traverse(self, artefact, parent=None):
         #print(type(artefact))
@@ -22,7 +25,7 @@ class CMDI():
                 showkey = key
                 if parent:
                     showkey = "%s/%s" % (parent, key) 
-                if self.DEBUG:
+                if 'hierarchy' in self.control:
                     print("\t /%s" % showkey)
                 self.traverse(artefact[key], showkey) 
         elif type(artefact) is list:
@@ -30,7 +33,7 @@ class CMDI():
                 showkey = listkey
                 if parent:
                     showkey="%s/%s" % (parent, listkey)
-                if self.DEBUG:
+                if 'hierarchy' in self.control:
                     print("\t\t /%s" % showkey)
                 self.traverse(listkey, parent)
         else:

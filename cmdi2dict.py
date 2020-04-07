@@ -12,18 +12,21 @@ import getopt
 
 def usage():
     print("CMDI/XML convertion tool")
-    print('Usage: cmdi2dict.py -i <inputfile> -o <outputfile>')
+    print('Usage: cmdi2dict.py [parameters] -i <inputfile> ')
+    print("Available parameters are:")
     print("\t-h show this usage")
+    print("\t-v verbose mode for debug purposes")
     print("\t-s generate fields statistics")
     print("\t-H extracti fields hierarchy")
     print("\t-j convertion to JSON format")
+    print("\t-o <outputfile>")
     return
 
 if __name__=='__main__':
     input = ''
     actions = {}
     try:
-        opts, args = getopt.getopt(sys.argv[1:],"hsHji:o:d:",["ifile=","idir=","ofile="])
+        opts, args = getopt.getopt(sys.argv[1:],"hsvHji:o:d:",["ifile=","idir=","ofile="])
     except getopt.GetoptError:
         usage()
         sys.exit(2)
@@ -36,6 +39,8 @@ if __name__=='__main__':
            actions['stats'] = True
         elif opt == '-H':
            actions['hierarchy'] = True
+        elif opt == '-v':
+           actions['verbose'] = True
         elif opt == '-j':
            actions['json'] = True
         elif opt in ("-i", "--ifile"):
@@ -51,7 +56,7 @@ if __name__=='__main__':
 
     # Do processing of one CMDI file
     if os.path.isfile(input):
-        cmdi = CMDI()
+        cmdi = CMDI(actions)
         d = cmdi.load(input)
         
         if 'stats' in actions:
@@ -63,7 +68,7 @@ if __name__=='__main__':
 
     if os.path.isdir(input):
     # Show all CMDI files in folder
-        cmdif = CMDI()
+        cmdif = CMDI(actions)
         d = cmdif.loadfolder(input)
         print(cmdif.printstats())
         

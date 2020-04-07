@@ -13,6 +13,7 @@ usage: cmdi2dict.py [-h] [-j] [-s] [-H] [-i inputfile] [-o outputfile] [-D input
 
 optional arguments:
   -h, --help                  show this help message and exit
+  -v, --verbose               verbose mode for debug messages
   -j, --json                  convert CMDI format to JSON
   -s, --stats                 generate statistics of CMDI fields
   -H, --hierarchy             extract hierarchy of CMDI fields 
@@ -47,8 +48,30 @@ DOCMAP 4
 None
 ```
 
-# Convert CMDI to JSON format
+# Convert CMDI file to JSON
+```
 cmdi2dict.py -j -i ./tests/test2.xml
+```
+Expected result is JSON record
 ```
 {'#document': {'DOCMAP': {'Topic': [{'#attributes': {'Target': 'ALL'}, 'Title': 'My Document'}, {'Topic': [{'#attributes': {'Target': 'ALL'}, 'Title': 'Basic Features'}, {'Topic': {'#attributes': {'Target': 'ALL'}, 'Title': 'Platforms Supported'}, '#attributes': {'Target': 'ALL'}, 'Title': 'About This Software'}], '#attributes': {'Target': 'ALL'}, 'Title': 'Overview'}], 'Location': {'Country': {'Code': 'NL'}, 'Region': 'Unknown', 'Continent': {'Code': 'EU'}, 'Address': 'often stated in the first part of the audio recording'}}}}
 ```
+
+# Extract hierarchy from CMDI files(s)
+```
+cmdi2dict.py -H -i ./tests/test2.xml
+```
+Expected result is the list of the hierarchy of fields
+```
+	 /#document/DOCMAP/Topic/#attributes
+	 /#document/DOCMAP/Topic/#attributes/Target
+	 /#document/DOCMAP/Topic/Title
+	 /#document/DOCMAP/Location
+	 /#document/DOCMAP/Location/Country
+	 /#document/DOCMAP/Location/Country/Code
+	 /#document/DOCMAP/Location/Region
+	 /#document/DOCMAP/Location/Continent
+	 /#document/DOCMAP/Location/Continent/Code
+	 /#document/DOCMAP/Location/Address
+```
+
