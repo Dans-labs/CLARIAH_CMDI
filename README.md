@@ -1,11 +1,34 @@
-# CLARIAHplus CMDI convertor
-Usage: 
+============================
+CMDI/XML exploration tool
+============================
+
+*by Slava Tykhonov, Data Archiving and Networked Services (DANS-KNAW) https://dans.knaw.nl
+
+*Created for CLARIAH+ WP3
+
+*Licensed under GPLv3*
+
+# Usage
+
 ```
-python ./cmdi2dict.py somefile.xml
+usage: cmdi2dict.py [-h] [-v] [-u URL] [-p PARAMS] [-H HEADER] [-a AGENT]
+                   [-t THREADS] [-off VARIANCE] [-diff DIFFERENCE] [-o OUT]
+                   [-P PROXY] [-x IGNORE] [-s SIZEIGNORE] [-d DATA]
+                   [-i IGMETH] [-c COOKIE] [-T TIMEOUT]
+
+optional arguments:
+  -h, --help             show this help message and exit
+  -j, --json             convert CMDI to JSON
+  -s, --stats            generate statistics of CMDI fields
+  -H, --hierarchy        extract hierarchy of CMDI fields 
+  -i inputfile, --ifile  Input CMDI file
+                         Provide an input file in CMDI/XML format
+  -D inputfolder, --idir Input folder with CMDI files
+                         Does processing of all fields in the folder
+  -o outputfile, --ofile Output file 
+                         Provide an file to save statistics or for export 
 ```
-Example:
-```
-python ./cmdi2dict.py ./tests/test2.xml 
+
 ```
 Output:
 ```
