@@ -16,13 +16,14 @@ def usage():
     print("\t-h show this usage")
     print("\t-s generate fields statistics")
     print("\t-H extracti fields hierarchy")
+    print("\t-j convertion to JSON format")
     return
 
 if __name__=='__main__':
     input = ''
     actions = {}
     try:
-        opts, args = getopt.getopt(sys.argv[1:],"hsHi:o:d:",["ifile=","idir=","ofile="])
+        opts, args = getopt.getopt(sys.argv[1:],"hsHji:o:d:",["ifile=","idir=","ofile="])
     except getopt.GetoptError:
         usage()
         sys.exit(2)
@@ -35,6 +36,8 @@ if __name__=='__main__':
            actions['stats'] = True
         elif opt == '-H':
            actions['hierarchy'] = True
+        elif opt == '-j':
+           actions['json'] = True
         elif opt in ("-i", "--ifile"):
            input = arg
         elif opt in ("-o", "--ofile"):

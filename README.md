@@ -26,8 +26,31 @@ optional arguments:
                               Provide an file to save fields statistics or export metadata 
 ```
 
+# Test data
+Some CMDI examples available for testing purposes in /tests folder
+
+# Collecting statistics of CMDI fields
+
 ```
-Output:
+cmdi2dict.py -s -i ./tests/test2.xml
+```
+Expected result is the frequency statistics of all fields
+```
+Title 160
+Topic 80
+Code 64
+Country 16
+Region 16
+Address 16
+Continent 16
+Location 8
+DOCMAP 4
+#document 2
+None
+```
+
+# Convert CMDI to JSON format
+cmdi2dict.py -j -i ./tests/test2.xml
 ```
 {'#document': {'DOCMAP': {'Topic': [{'#attributes': {'Target': 'ALL'}, 'Title': 'My Document'}, {'Topic': [{'#attributes': {'Target': 'ALL'}, 'Title': 'Basic Features'}, {'Topic': {'#attributes': {'Target': 'ALL'}, 'Title': 'Platforms Supported'}, '#attributes': {'Target': 'ALL'}, 'Title': 'About This Software'}], '#attributes': {'Target': 'ALL'}, 'Title': 'Overview'}], 'Location': {'Country': {'Code': 'NL'}, 'Region': 'Unknown', 'Continent': {'Code': 'EU'}, 'Address': 'often stated in the first part of the audio recording'}}}}
 ```
