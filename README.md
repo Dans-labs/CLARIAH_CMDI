@@ -1,4 +1,4 @@
-#CMDI/XML exploration tool
+# CMDI/XML exploration tool
 
 *by Slava Tykhonov, Data Archiving and Networked Services (DANS-KNAW) https://dans.knaw.nl
 
