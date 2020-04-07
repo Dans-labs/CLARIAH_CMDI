@@ -19,7 +19,9 @@ def usage():
     print("\t-s generate fields statistics")
     print("\t-H extracti fields hierarchy")
     print("\t-j convertion to JSON format")
-    print("\t-o <outputfile>")
+    print("\t-i inputfile")
+    print("\t-d inputfolder")
+    print("\t-o outputfile")
     return
 
 if __name__=='__main__':

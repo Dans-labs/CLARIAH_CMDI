@@ -19,7 +19,7 @@ optional arguments:
   -H, --hierarchy             extract hierarchy of CMDI fields 
   -i inputfile, --ifile       Input CMDI file
                               Provide an input file in CMDI/XML format
-  -D inputfolder, --idir      Input folder with CMDI files
+  -d inputfolder, --idir      Input folder with CMDI files
                               Does processing of all fields in the folder
   -o outputfile, --ofile      Output file 
                               Provide an file to save fields statistics or export metadata 
@@ -57,7 +57,7 @@ Expected result is JSON record
 {'#document': {'DOCMAP': {'Topic': [{'#attributes': {'Target': 'ALL'}, 'Title': 'My Document'}, {'Topic': [{'#attributes': {'Target': 'ALL'}, 'Title': 'Basic Features'}, {'Topic': {'#attributes': {'Target': 'ALL'}, 'Title': 'Platforms Supported'}, '#attributes': {'Target': 'ALL'}, 'Title': 'About This Software'}], '#attributes': {'Target': 'ALL'}, 'Title': 'Overview'}], 'Location': {'Country': {'Code': 'NL'}, 'Region': 'Unknown', 'Continent': {'Code': 'EU'}, 'Address': 'often stated in the first part of the audio recording'}}}}
 ```
 
-# Extract hierarchy from CMDI files(s)
+# Extract hierarchy from CMDI file(s)
 ```
 cmdi2dict.py -H -i ./tests/test2.xml
 ```
@@ -75,3 +75,20 @@ Expected result is the list of the hierarchy of fields
 	 /#document/DOCMAP/Location/Address
 ```
 
+# Process all CMDI files in the selected folder and collect statistics
+```
+cmdi2dict.py -s -d ./tests
+```
+Expected result
+```
+Title 320
+Topic 160
+Code 64
+Region 16
+Country 16
+Address 16
+Continent 16
+Location 8
+DOCMAP 8
+#document 4
+```
