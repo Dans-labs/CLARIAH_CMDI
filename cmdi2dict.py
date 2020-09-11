@@ -2,9 +2,9 @@
 # CMDI/XML convertion tool
 # Created and maintained by Slava Tykhonov (DANS-KNAW)
 import sys
-reload(sys)  
+#reload(sys)  
 import os
-sys.setdefaultencoding('utf-8')
+#sys.setdefaultencoding('utf-8')
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), './')))
 from xml.dom import minidom
 from xml2dict.processor import CMDI # load, xmldom2dict
@@ -17,6 +17,7 @@ def usage():
     print("\t-h show this usage")
     print("\t-v verbose mode for debug purposes")
     print("\t-s generate fields statistics")
+    print("\t-S generate schema")
     print("\t-H extracti fields hierarchy")
     print("\t-j convertion to JSON format")
     print("\t-i inputfile")
@@ -28,7 +29,7 @@ if __name__=='__main__':
     input = ''
     actions = {}
     try:
-        opts, args = getopt.getopt(sys.argv[1:],"hsvHji:o:d:",["ifile=","idir=","ofile="])
+        opts, args = getopt.getopt(sys.argv[1:],"hsvSHji:o:d:",["ifile=","idir=","ofile="])
     except getopt.GetoptError:
         usage()
         sys.exit(2)
@@ -41,6 +42,8 @@ if __name__=='__main__':
            actions['stats'] = True
         elif opt == '-H':
            actions['hierarchy'] = True
+        elif opt == '-S':
+           actions['schema'] = True
         elif opt == '-v':
            actions['verbose'] = True
         elif opt == '-j':
@@ -67,11 +70,14 @@ if __name__=='__main__':
             print(cmdi.json)
         if 'hierarchy' in actions:
             print(cmdi.gethierarchy())
+        if 'schema' in actions:
+            print(cmdi.schema())
 
     if os.path.isdir(input):
     # Show all CMDI files in folder
         cmdif = CMDI(actions)
         d = cmdif.loadfolder(input)
-        print(cmdif.printstats())
+        #print(cmdif.printstats())
+        print(cmdif.schema())
         
  

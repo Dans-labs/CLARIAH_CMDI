@@ -74,6 +74,13 @@ class CMDI():
             print("%s %s" % (item[0], item[1]))
         return 
 
+    def schema(self, order=True):
+        for item in sorted(self.stats.items(),key=operator.itemgetter(1),reverse=order):
+            #Availability    Availability    Other information on the geographic coverage of the data.               text    7               FALSE   FALSE   FALSE   FALSE   TRUE    TRUE    Access  cmm-cmdi
+            print("\t%s\t%s\t%s description\t\ttext\t9\t\tFALSE\tFALSE\tFALSE\tFALSE\tTRUE\tTRUE\tcmm-cmdi\tcmm-cmdi" % (item[0], item[0], item[0]))
+            #print("%s %s" % (item[0], item[1]))
+        return
+
     def node_attributes(self, node):
         """Return an attribute dictionary """
         if node.hasAttributes():
@@ -142,7 +149,7 @@ class CMDI():
                     elif isinstance(child, str):
                         self.dappend(new_dict, '#text', child)
                     else:
-                        print "ERROR"
+                        print("ERROR")
                 return self.with_attributes(node, new_dict)
 
     def loadfolder(self, fname):
