@@ -12,6 +12,9 @@ class CMDI():
         self.hierarchy = {}
         self.DEBUG = False
         self.control = actions
+        self.metadata = {}
+        self.schema = {}
+        self.currentkey = ''
         if 'verbose' in actions:
             self.DEBUG = actions['verbose']
 
@@ -27,6 +30,7 @@ class CMDI():
                     showkey = "%s/%s" % (parent, key) 
                 if 'hierarchy' in self.control:
                     print("\t /%s" % showkey)
+                self.currentkey = showkey
                 self.traverse(artefact[key], showkey) 
         elif type(artefact) is list:
             for listkey in artefact:
@@ -35,9 +39,13 @@ class CMDI():
                     showkey="%s/%s" % (parent, listkey)
                 if 'hierarchy' in self.control:
                     print("\t\t /%s" % showkey)
+                self.currentkey = showkey
                 self.traverse(listkey, parent)
         else:
-            #print(artefact)
+            print(self.currentkey)
+            print(artefact)
+            if artefact:
+                self.metadata[self.currentkey] = artefact
             i = 1
         return
  
@@ -79,6 +87,12 @@ class CMDI():
             #Availability    Availability    Other information on the geographic coverage of the data.               text    7               FALSE   FALSE   FALSE   FALSE   TRUE    TRUE    Access  cmm-cmdi
             print("\t%s\t%s\t%s description\t\ttext\t9\t\tFALSE\tFALSE\tFALSE\tFALSE\tTRUE\tTRUE\tcmm-cmdi\tcmm-cmdi" % (item[0], item[0], item[0]))
             #print("%s %s" % (item[0], item[1]))
+        return
+
+    def rowschema(self, order=True):
+        for item in sorted(self.stats.items(),key=operator.itemgetter(1),reverse=order):
+            self.schema[item[0]] = item[1]
+            print("%s=%s" % (item[0], item[1]))
         return
 
     def node_attributes(self, node):
