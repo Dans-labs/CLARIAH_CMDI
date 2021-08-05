@@ -4,11 +4,38 @@
 import sys
 #reload(sys)  
 import os
+import requests
 #sys.setdefaultencoding('utf-8')
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), './')))
 from xml.dom import minidom
 from xml2dict.processor import CMDI # load, xmldom2dict
 import getopt
+import json
+headers = {"content-type":"application/json"}
+
+def ndegrapql(q, s):
+    query = "{\"query\":\"query Terms {  terms(sources: [\\\"" + s + "\\\"], query: \\\"" + q + "\\\") {    source {      uri      name      creators {        uri        name        alternateName      }    }    result {      __typename      ... on Terms {        terms {          uri          prefLabel          altLabel          hiddenLabel          scopeNote          broader {            uri            prefLabel          }          narrower {            uri            prefLabel          }          related {            uri            prefLabel          }        }      }      ... on Error {        message      }    }  }}\"}" 
+    r = requests.post("https://termennetwerk-api.netwerkdigitaalerfgoed.nl/graphql", data=query, headers=headers)
+    return r.json()
+
+def linkage(x):
+   source = 'https://query.wikidata.org/sparql#entities-all'
+   if isinstance(x, list):
+     return [linkage(v) for v in x]
+   elif isinstance(x, dict):
+     for k, v in x.items():     
+         if k == 'Keyword':
+             for keyword in v:
+                 search = ndegrapql(keyword, source)
+                 if search:
+                     print("%s => %s\n" % (keyword, search))
+         if k == 'SpatialCoverage':
+            search = ndegrapql(v, source)
+            if search:
+                 print("%s => %s\n" % (v, search))
+     return {k[0].upper() + k[1:]: linkage(v) for k, v in x.items()}
+   else:
+     return x
 
 def usage():
     print("CMDI/XML convertion tool")
@@ -20,6 +47,7 @@ def usage():
     print("\t-S generate schema")
     print("\t-H extracti fields hierarchy")
     print("\t-j convertion to JSON format")
+    print("\t-l start linking process")
     print("\t-i inputfile")
     print("\t-d inputfolder")
     print("\t-o outputfile")
@@ -29,7 +57,7 @@ if __name__=='__main__':
     input = ''
     actions = {}
     try:
-        opts, args = getopt.getopt(sys.argv[1:],"hsvSHji:o:d:",["ifile=","idir=","ofile="])
+        opts, args = getopt.getopt(sys.argv[1:],"hsvSHjli:o:d:",["ifile=","idir=","ofile="])
     except getopt.GetoptError:
         usage()
         sys.exit(2)
@@ -48,6 +76,8 @@ if __name__=='__main__':
            actions['verbose'] = True
         elif opt == '-j':
            actions['json'] = True
+        elif opt == '-l':
+           actions['linking'] = True
         elif opt in ("-i", "--ifile"):
            input = arg
         elif opt in ("-o", "--ofile"):
@@ -67,11 +97,16 @@ if __name__=='__main__':
         if 'stats' in actions:
             print(cmdi.printstats())
         if 'json' in actions:
-            print(cmdi.json)
+            jsonobj = json.dumps(cmdi.json)
+            print(jsonobj)
         if 'hierarchy' in actions:
             print(cmdi.gethierarchy())
         if 'schema' in actions:
             print(cmdi.schema())
+        if 'linking' in actions:
+            jsonobj = json.dumps(cmdi.json)
+            d = linkage(cmdi.json)
+            print(json.dumps(d, indent=4, sort_keys=True)) 
 
     if os.path.isdir(input):
     # Show all CMDI files in folder
