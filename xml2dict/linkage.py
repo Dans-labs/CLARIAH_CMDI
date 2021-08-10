@@ -1,30 +1,47 @@
 import json
 import requests
+import re
 from skosmos_client import SkosmosClient, SkosmosConcept
 
 class Draftlinkage():
-    def __init__(self, sourceobject=None, content=None, debug=False):
+    def __init__(self, sourcename=None, sourceobject=None, content=None, debug=False):
         self.keywords = {}
         self.geoconcepts = {}
         self.source = sourceobject
+        self.sourcename = sourcename
         self.linkagesource = 'https://query.wikidata.org/sparql#entities-all'
         self.apiskosmos = 'http://api.finto.fi/rest/v1/'
-        self.debug = 'True' #debug
+        self.debug = debug
         self.geosource = 'yso-paikat'
 
-    def conceptmaker(self, cotype, q, s):
-        if cotype == 'nde':
-            return self.ndegrapql(q, s)
-        if cotype == 'skosmos':
-            return self.skosmosql(q, s)
+    def geofilter(self, wikijson, name):
+        for term in wikijson['data']['terms']:
+            for x in term['result']['terms']:
+                check = re.search(r"%s" % name, str(x['scopeNote']))
+                if check:
+                    if self.debug:
+                        print("%s %s" % (x['uri'], x['scopeNote']))
+                    for code in x['altLabel']:
+                        if len(code) <= 3:
+                            return { 'uri' : x['uri'], 'geocode': code }
+                    return { 'uri' : x['uri'], 'geoname': x['scopeNote'] }
         return
 
-    def skosmosql(self, q, s):
+    def conceptmaker(self, cotype, k, q, s):
+        if cotype == 'nde':
+            return self.ndegrapql(k, q, s)
+        if cotype == 'skosmos':
+            return self.skosmosql(k, q, s)
+        return
+
+    def skosmosql(self, field, q, s):
         results = {}
+        #q = 'Yugoslavia'
         query = q + '*'
         skosmos = SkosmosClient(api_base=self.apiskosmos)
+        results[field] = q
+        results['source'] = self.sourcename
         results['rawdata'] = skosmos.search(query, vocabs=s, lang="en")
-        print(len(results['rawdata']))
         concepturi = []
         for concept in results['rawdata']:
             if 'uri' in concept:
@@ -37,12 +54,25 @@ class Draftlinkage():
         results['uri'] = concepturi
         return results
 
-    def ndegrapql(self, q, s):
+    def ndegrapql(self, field, q, s):
         results = {}
         headers = {"content-type":"application/json"}
         query = "{\"query\":\"query Terms {  terms(sources: [\\\"" + s + "\\\"], query: \\\"" + q + "\\\") {    source {      uri      name      creators {        uri        name        alternateName      }    }    result {      __typename      ... on Terms {        terms {          uri          prefLabel          altLabel          hiddenLabel          scopeNote          broader {            uri            prefLabel          }          narrower {            uri            prefLabel          }          related {            uri            prefLabel          }        }      }      ... on Error {        message      }    }  }}\"}"
         r = requests.post("https://termennetwerk-api.netwerkdigitaalerfgoed.nl/graphql", data=query, headers=headers)
         results['rawdata'] = r.json()
+        results[field] = q
+        results['source'] = self.sourcename
+        geo = self.geofilter(results['rawdata'], "^land in")
+        if not geo:
+            geo = self.geofilter(results['rawdata'], "staat")
+        if not geo:
+            geo = self.geofilter(results['rawdata'], "land\s+in")
+        if not geo:
+            geo = self.geofilter(results['rawdata'], "staten")
+        if not geo:
+            geo = self.geofilter(results['rawdata'], "kolonie")
+        if geo:
+            results['geo'] = geo
         return results
 
     def linkage(self, x):
@@ -52,17 +82,17 @@ class Draftlinkage():
             for k, v in x.items():
                 if k == '1Keyword':
                     for keyword in v:
-                        search = self.conceptmaker('nde', keyword, self.linkagesource)
+                        search = self.conceptmaker('nde', k, keyword, self.linkagesource)
                         if search:
                             if self.debug:
                                 print("%s => %s\n" % (keyword, search))
                             self.keywords[keyword] = search
                 if k == 'SpatialCoverage':
                     concepts = {}
-                    skossearch = self.conceptmaker('skosmos', v, self.geosource)
+                    skossearch = self.conceptmaker('skosmos', k, v, self.geosource)
                     if skossearch:
                         concepts['skosmos'] = skossearch
-                    search = self.conceptmaker('nde', v, self.linkagesource)
+                    search = self.conceptmaker('nde', k, v, self.linkagesource)
                     if search:
                         concepts['nde'] = search
                         if self.debug:

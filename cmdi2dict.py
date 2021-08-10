@@ -9,33 +9,9 @@ import requests
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), './')))
 from xml.dom import minidom
 from xml2dict.processor import CMDI # load, xmldom2dict
+from xml2dict.linkage import Draftlinkage
 import getopt
 import json
-headers = {"content-type":"application/json"}
-
-def ndegrapql(q, s):
-    query = "{\"query\":\"query Terms {  terms(sources: [\\\"" + s + "\\\"], query: \\\"" + q + "\\\") {    source {      uri      name      creators {        uri        name        alternateName      }    }    result {      __typename      ... on Terms {        terms {          uri          prefLabel          altLabel          hiddenLabel          scopeNote          broader {            uri            prefLabel          }          narrower {            uri            prefLabel          }          related {            uri            prefLabel          }        }      }      ... on Error {        message      }    }  }}\"}" 
-    r = requests.post("https://termennetwerk-api.netwerkdigitaalerfgoed.nl/graphql", data=query, headers=headers)
-    return r.json()
-
-def linkage(x):
-   source = 'https://query.wikidata.org/sparql#entities-all'
-   if isinstance(x, list):
-     return [linkage(v) for v in x]
-   elif isinstance(x, dict):
-     for k, v in x.items():     
-         if k == 'Keyword':
-             for keyword in v:
-                 search = ndegrapql(keyword, source)
-                 if search:
-                     print("%s => %s\n" % (keyword, search))
-         if k == 'SpatialCoverage':
-            search = ndegrapql(v, source)
-            if search:
-                 print("%s => %s\n" % (v, search))
-     return {k[0].upper() + k[1:]: linkage(v) for k, v in x.items()}
-   else:
-     return x
 
 def usage():
     print("CMDI/XML convertion tool")
@@ -105,14 +81,22 @@ if __name__=='__main__':
             print(cmdi.schema())
         if 'linking' in actions:
             jsonobj = json.dumps(cmdi.json)
-            d = linkage(cmdi.json)
-            print(json.dumps(d, indent=4, sort_keys=True)) 
+            #d = linkage(cmdi.json)
+            links = Draftlinkage(cmdi.json)
+            links.linkage(cmdi.json)
+            #print(json.dumps(d, indent=4, sort_keys=True)) 
+            print(json.dumps(links.geoconcepts, indent=4, sort_keys=True))
 
     if os.path.isdir(input):
     # Show all CMDI files in folder
         cmdif = CMDI(actions)
         d = cmdif.loadfolder(input)
+        for filename in cmdif.content:
+            links = Draftlinkage(filename) #cmdif.content[filename])
+            links.linkage(cmdif.content[filename])
+            print(json.dumps(links.geoconcepts, indent=4, sort_keys=True))
+        #print(json.dumps(cmdif.content, indent=4, sort_keys=True))
         #print(cmdif.printstats())
-        print(cmdif.schema())
+        #print(cmdif.schema())
         
  
