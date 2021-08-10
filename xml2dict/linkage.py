@@ -1,6 +1,6 @@
 import json
 import requests
-from skosmos_client import SkosmosClient
+from skosmos_client import SkosmosClient, SkosmosConcept
 
 class Draftlinkage():
     def __init__(self, sourceobject=None, content=None, debug=False):
@@ -21,8 +21,6 @@ class Draftlinkage():
 
     def skosmosql(self, q, s):
         results = {}
-        q = 'Amsterdam'
-        #q = 'ne*'
         query = q + '*'
         skosmos = SkosmosClient(api_base=self.apiskosmos)
         results['rawdata'] = skosmos.search(query, vocabs=s, lang="en")
@@ -30,8 +28,11 @@ class Draftlinkage():
         concepturi = []
         for concept in results['rawdata']:
             if 'uri' in concept:
-                data = skosmos.get_concept(s, concept['uri'])
-                concepturi.append({ concept['uri']: str(data) })
+                payload = {'uri': concept['uri'], 'format': 'application/ld+json'}
+                url = self.apiskosmos + s + '/data' 
+                req = requests.get(url, params=payload)
+                data = req.json()
+                concepturi.append({ concept['uri']: data })
 
         results['uri'] = concepturi
         return results
