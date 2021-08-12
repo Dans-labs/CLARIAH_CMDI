@@ -11,8 +11,25 @@ class Draftlinkage():
         self.sourcename = sourcename
         self.linkagesource = 'https://query.wikidata.org/sparql#entities-all'
         self.apiskosmos = 'http://api.finto.fi/rest/v1/'
+        self.wikicacheurl = 'https://www.wikidata.org/wiki/Special:EntityData'
         self.debug = debug
         self.geosource = 'yso-paikat'
+
+    def cache_wikidata(self, termURI):
+        artnamespace = {}
+        searchterm = re.search("(Q\w+)", termURI)
+
+        if searchterm:
+            cache_url = "%s/%s.json" % (self.wikicacheurl, str(searchterm.group(0)))
+            artnamespace['term'] = searchterm.group(0)
+            artnamespace['termURI'] = termURI
+            try:
+                r = requests.get(cache_url)
+                concept = r.json()
+                artnamespace['name'] = concept['entities'][searchterm.group(0)]['aliases']['en']
+            except:
+                artnamespace[termURI] = {}
+        return artnamespace
 
     def geofilter(self, wikijson, name):
         for term in wikijson['data']['terms']:
@@ -23,8 +40,10 @@ class Draftlinkage():
                         print("%s %s" % (x['uri'], x['scopeNote']))
                     for code in x['altLabel']:
                         if len(code) <= 3:
-                            return { 'uri' : x['uri'], 'geocode': code }
-                    return { 'uri' : x['uri'], 'geoname': x['scopeNote'] }
+                            cache = self.cache_wikidata(x['uri'])
+                            return { 'uri' : x['uri'], 'geocode': code, 'cache': cache }
+                    cache = self.cache_wikidata(x['uri'])
+                    return { 'uri' : x['uri'], 'cache': cache, 'geoname': x['scopeNote'] }
         return
 
     def conceptmaker(self, cotype, k, q, s):
