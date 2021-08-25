@@ -2,7 +2,7 @@ import json
 import requests
 import re
 from skosmos_client import SkosmosClient, SkosmosConcept
-from config import Specialfields
+from config import * 
 
 class Draftlinkage():
     def __init__(self, sourcename=None, sourceobject=None, content=None, debug=False):
@@ -10,11 +10,11 @@ class Draftlinkage():
         self.geoconcepts = {}
         self.source = sourceobject
         self.sourcename = sourcename
-        self.linkagesource = 'https://query.wikidata.org/sparql#entities-all'
-        self.apiskosmos = 'http://api.finto.fi/rest/v1/'
-        self.wikicacheurl = 'https://www.wikidata.org/wiki/Special:EntityData'
+        self.linkagesource = LINKAGE_SOURCE
+        self.apiskosmos = API_SKOSMOS
+        self.wikicacheurl = WIKI_CACHE_URL
         self.debug = debug
-        self.geosource = 'yso-paikat'
+        self.geosource = SKOSMOS_GEO_SOURCE
 
     def cache_wikidata(self, termURI):
         artnamespace = {}
@@ -79,20 +79,15 @@ class Draftlinkage():
         GEOFLAG = True
         headers = {"content-type":"application/json"}
         query = "{\"query\":\"query Terms {  terms(sources: [\\\"" + s + "\\\"], query: \\\"" + q + "\\\") {    source {      uri      name      creators {        uri        name        alternateName      }    }    result {      __typename      ... on Terms {        terms {          uri          prefLabel          altLabel          hiddenLabel          scopeNote          broader {            uri            prefLabel          }          narrower {            uri            prefLabel          }          related {            uri            prefLabel          }        }      }      ... on Error {        message      }    }  }}\"}"
-        r = requests.post("https://termennetwerk-api.netwerkdigitaalerfgoed.nl/graphql", data=query, headers=headers)
+        r = requests.post(NDE_GRAPHQL, data=query, headers=headers)
         results['rawdata'] = r.json()
         results[field] = q
         results['source'] = self.sourcename
         try:
-            geo = self.geofilter(results['rawdata'], "^land in")
-            if not geo:
-                geo = self.geofilter(results['rawdata'], "staat")
-            if not geo:
-                geo = self.geofilter(results['rawdata'], "land\s+in")
-            if not geo:
-                geo = self.geofilter(results['rawdata'], "staten")
-            if not geo:
-                geo = self.geofilter(results['rawdata'], "kolonie")
+            geo = False
+            for locentity in NL_wiki_locations_regexp:
+                if not geo:
+                    geo = self.geofilter(results['rawdata'], locentity)
             if geo:
                 results['geo'] = geo
         except:
@@ -116,7 +111,7 @@ class Draftlinkage():
                     candidates = []
                     if type(v) is str:
                         candidates.append(v)
-                    else:
+                    elif type(v) is list:
                         for i in range(len(v)):
                             candidates.append(v[i])
 
