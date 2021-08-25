@@ -2,7 +2,7 @@ import json
 import requests
 import re
 from skosmos_client import SkosmosClient, SkosmosConcept
-Specialfields = ['SpatialCoverage', 'cmdp:CountryName', 'cmdp:coverage']
+from config import Specialfields
 
 class Draftlinkage():
     def __init__(self, sourcename=None, sourceobject=None, content=None, debug=False):
@@ -121,7 +121,6 @@ class Draftlinkage():
                             candidates.append(v[i])
 
                     for value in candidates:
-                        print(value)
                         skossearch = self.conceptmaker('skosmos', k, value, self.geosource)
                         if skossearch:
                             concepts['skosmos'] = skossearch
