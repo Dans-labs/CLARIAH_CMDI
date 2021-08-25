@@ -2,6 +2,7 @@ import json
 import requests
 import re
 from skosmos_client import SkosmosClient, SkosmosConcept
+Specialfields = ['SpatialCoverage', 'cmdp:CountryName', 'cmdp:coverage']
 
 class Draftlinkage():
     def __init__(self, sourcename=None, sourceobject=None, content=None, debug=False):
@@ -75,23 +76,27 @@ class Draftlinkage():
 
     def ndegrapql(self, field, q, s):
         results = {}
+        GEOFLAG = True
         headers = {"content-type":"application/json"}
         query = "{\"query\":\"query Terms {  terms(sources: [\\\"" + s + "\\\"], query: \\\"" + q + "\\\") {    source {      uri      name      creators {        uri        name        alternateName      }    }    result {      __typename      ... on Terms {        terms {          uri          prefLabel          altLabel          hiddenLabel          scopeNote          broader {            uri            prefLabel          }          narrower {            uri            prefLabel          }          related {            uri            prefLabel          }        }      }      ... on Error {        message      }    }  }}\"}"
         r = requests.post("https://termennetwerk-api.netwerkdigitaalerfgoed.nl/graphql", data=query, headers=headers)
         results['rawdata'] = r.json()
         results[field] = q
         results['source'] = self.sourcename
-        geo = self.geofilter(results['rawdata'], "^land in")
-        if not geo:
-            geo = self.geofilter(results['rawdata'], "staat")
-        if not geo:
-            geo = self.geofilter(results['rawdata'], "land\s+in")
-        if not geo:
-            geo = self.geofilter(results['rawdata'], "staten")
-        if not geo:
-            geo = self.geofilter(results['rawdata'], "kolonie")
-        if geo:
-            results['geo'] = geo
+        try:
+            geo = self.geofilter(results['rawdata'], "^land in")
+            if not geo:
+                geo = self.geofilter(results['rawdata'], "staat")
+            if not geo:
+                geo = self.geofilter(results['rawdata'], "land\s+in")
+            if not geo:
+                geo = self.geofilter(results['rawdata'], "staten")
+            if not geo:
+                geo = self.geofilter(results['rawdata'], "kolonie")
+            if geo:
+                results['geo'] = geo
+        except:
+            GEOFLAG = False
         return results
 
     def linkage(self, x):
@@ -106,17 +111,26 @@ class Draftlinkage():
                             if self.debug:
                                 print("%s => %s\n" % (keyword, search))
                             self.keywords[keyword] = search
-                if k == 'SpatialCoverage':
+                if k in Specialfields:
                     concepts = {}
-                    skossearch = self.conceptmaker('skosmos', k, v, self.geosource)
-                    if skossearch:
-                        concepts['skosmos'] = skossearch
-                    search = self.conceptmaker('nde', k, v, self.linkagesource)
-                    if search:
-                        concepts['nde'] = search
-                        if self.debug:
-                            print("%s => %s\n" % (v, search))
-                    self.geoconcepts[v] = concepts
+                    candidates = []
+                    if type(v) is str:
+                        candidates.append(v)
+                    else:
+                        for i in range(len(v)):
+                            candidates.append(v[i])
+
+                    for value in candidates:
+                        print(value)
+                        skossearch = self.conceptmaker('skosmos', k, value, self.geosource)
+                        if skossearch:
+                            concepts['skosmos'] = skossearch
+                        search = self.conceptmaker('nde', k, value, self.linkagesource)
+                        if search:
+                            concepts['nde'] = search
+                            if self.debug:
+                                print("%s => %s\n" % (value, search))
+                        self.geoconcepts[value] = concepts
             return {k[0].upper() + k[1:]: self.linkage(v) for k, v in x.items()}
         else:
             return x
