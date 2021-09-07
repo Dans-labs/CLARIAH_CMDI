@@ -13,6 +13,7 @@ class CMDI():
         self.DEBUG = False
         self.control = actions
         self.metadata = {}
+        self.path = []
         self.schema = {}
         self.currentkey = ''
         if 'verbose' in actions:
@@ -22,7 +23,7 @@ class CMDI():
         #print(type(artefact))
         if type(artefact) is dict:
             if self.DEBUG:
-                print("[DEBUG] Keys: %s " % str(artefact.keys()))
+                print("[KEY DEBUG] Keys: %s " % str(artefact.keys()))
 
             for key in artefact.keys():
                 showkey = key
@@ -31,19 +32,31 @@ class CMDI():
                 if 'hierarchy' in self.control:
                     print("\t /%s" % showkey)
                 self.currentkey = showkey
+                #if self.DEBUG:
+                #print("%s KEY %s %s" % (artefact[key], key, self.currentkey))
                 self.traverse(artefact[key], showkey) 
         elif type(artefact) is list:
             for listkey in artefact:
+                if self.DEBUG:
+                    print("Art %s %s %s" % (listkey, parent, type(listkey))) #, artefact[listkey]))
                 showkey = listkey
                 if parent:
                     showkey="%s/%s" % (parent, listkey)
                 if 'hierarchy' in self.control:
                     print("\t\t /%s" % showkey)
-                self.currentkey = showkey
+                if not type(listkey) is str:
+                    self.currentkey = showkey
+                if self.DEBUG:
+                    print("KEY %s %s" % (self.currentkey, type(listkey)))
                 self.traverse(listkey, parent)
         else:
-            print(self.currentkey)
-            print(artefact)
+            DEBUG = 1
+            if self.DEBUG:
+                print("[DEBUG KEY-VALUE] %s %s" % (self.currentkey, artefact))
+            item = {}
+            item[self.currentkey] = artefact
+            #self.path.append( { self.currentkey: artefact } )
+            self.path.append(item)
             if artefact:
                 self.metadata[self.currentkey] = artefact
             i = 1
@@ -53,6 +66,27 @@ class CMDI():
         print(self.json.keys())
         self.traverse(self.json)
         return
+
+    def xpath(self):
+        #print(self.json.keys())
+        self.record = {}
+        x = self.traverse(self.json)
+        for item in self.path:
+            for key in item:
+                value = item[key]
+                if self.DEBUG:
+                    print("%s %s" % (key, value))
+                if key in self.record:
+                    cache = self.record[key]
+                    #print("%s %s" % (cache, type(cache)))
+                    if type(cache) is list:
+                        newcache.append(value)
+                    else:
+                        newcache = [ cache, value ] 
+                    self.record[key] = newcache
+                else:
+                    self.record[key] = value
+        return self.record
 
     def dappend(self, dictionary, key, item):
         """Append item to dictionary at key.  Only create a list if there is more than one item for the given key.
@@ -168,12 +202,13 @@ class CMDI():
 
     def loadfolder(self, fname):
         files = []
+        self.content = {}
         onlyfiles = [f for f in listdir(fname) if isfile(join(fname, f))]
         for xmlfile in onlyfiles:
             files.append("%s/%s" % (fname, xmlfile))
         for filename in files:
             try:
-                self.load(filename)
+                self.content[filename] = self.load(filename)
             except:
                 print("Error in %s" % filename)
         return files
